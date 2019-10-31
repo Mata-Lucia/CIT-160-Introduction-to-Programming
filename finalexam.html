@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Sum of Odd Integers </title>
+    <script>
+    /* Input: An integer of the user's choice.
+     * Processing: Add all the odd numbers between 1 and the number
+     *    entered by the user.
+     * Output: Output the total.
+     */
+
+  function wrapper() {
+        var hand = [9, 3, 6, 9];
+        var score = twentyOne(hand);
+        document.getElementById('outputDiv').innerHTML = score;
+   }
+
+  function twentyOne(hand) {
+    var s = 0
+    for (var i = 0; i < hand.length; i++) {
+      s += hand[i];
+    }
+    if (s < 21) {
+      return s;
+    }
+    else {
+      s = "Bust!"
+    }
+    return s;
+  }
+
+    </script>
+  </head>
+
+  <body>
+    <input type="text" id="input1"><br>
+    <button type="button" onclick="wrapper()">Click</button> <br>
+    <div id="outputDiv"></div>
+  </body>
+</html>

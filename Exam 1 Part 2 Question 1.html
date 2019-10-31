@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>How Many Acres?</title>
+<script>
+  /* Input: Width and lenght of parcel in feet.
+   * Processing: Multiply width and lenght and divide by 43560.
+   * Output: Display the acres in a parcel of land.
+   */
+
+// Your JavaScript function belongs here.
+
+  function computeSize() {
+    // Get width and lenght
+    var widthInFeet = parseFloat(document.getElementById('width').value);
+    var lenghtInFeet = parseFloat(document.getElementById('length').value);
+
+    //Calculate Acres
+    var acresTotal = widthInFeet * lenghtInFeet / 43560
+
+    // Display calculation
+    document.getElementById('acres').innerHTML = acresTotal
+  }
+
+</script>
+</head>
+
+<body>
+    <h1>How Many Acres?</h1>
+    Width (feet) <input type="text" id="width"><br>
+    Length (feet) <input type="text" id="length"><br>
+    <button type="button" onclick="computeSize()">Acres</button><br>
+    Size (acres) <div id="acres"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>  </title>
+    <script>
+    /* Input:
+     * Processing:
+     * Output:
+     */
+
+     function wrapper ()  {
+       var myList = [1, 2, 3, 4, 5, 6];
+       var ends = addEnds (myList);
+       var middle = getMiddle (myList);
+       document.getElementById("output1").innerHTML = ends;
+       document.getElementById("output2").innerHTML = middle;
+     }
+
+     function addEnds (list) {
+       return list [0];
+     }
+
+     function getMiddle (list) {
+       return list [list.lenght - 1];
+     }
+    </script>
+  </head>
+
+  <body>
+    Please enter any number: <input type="text" id="input1"><br>
+    <button type="button" onclick="wrapper()">Click</button> <br>
+    <div id="output1"></div>
+    <div id="output2"></div>
+</html>

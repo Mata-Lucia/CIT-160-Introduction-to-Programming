@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Arrays </title>
+    <script>
+    /* Input:
+     * Processing:
+     * Output:
+     */
+
+     function wrapper()  {
+       var list = [1, 2, 3, 4, 5, 6];
+       var evens = countEvens(list);
+       var products = multiply(list, 3);
+       document.getElementById("output1").innerHTML = evens;
+       document.getElementById("output2").innerHTML = products;
+     }
+
+     function countEvens(list) {
+       var s = 0;
+       for (var i = 0; i < list.length; i++) {
+         if ((list[i] % 2) == 0) {
+           s += 1;
+           return s;
+         }
+         else {
+           s = "bust";
+           return s;
+         }
+       }
+     }
+
+     /*function multiply(list, multiplier) {
+       var result = list.map(function (list){
+         return list * multiplier;
+       });
+       return result;
+     }*/
+
+     function multiply(list, multiplier) {
+       var product = [];
+       for (var r = 0; r < list.length; r++) {
+         product[r] = list[r] * multiplier;
+       }
+       return product;
+     }
+
+    </script>
+  </head>
+
+  <body>
+    <button type="button" onclick="wrapper()">Click</button> <br>
+    Evens: <div id="output1"></div>
+    Multiplication: <div id="output2"></div>
+</html>

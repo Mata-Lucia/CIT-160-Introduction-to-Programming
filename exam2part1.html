@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: Two numbers entered by user.
+ * Processing: If both numbers are greater than 15 or their sum is
+ *      greater than 15, the statement is true. Otherwise, it's false.
+ * Output: Print whether the statement is true or false.
+ */
+
+ function fifteen () {
+   var one = parseFloat(document.getElementById('one').value);
+   var two = parseFloat(document.getElementById('two').value);
+
+   if ( (one > 15 && two > 15) || ( one + two > 15)) {
+        document.getElementById('output').innerHTML = "True";
+   }
+   else {
+        document.getElementById('output').innerHTML = "False";
+   }
+ }
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="fifteen()">Click</button>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Sum of Odd Integers </title>
+    <script>
+    /* Input: An integer of the user's choice.
+     * Processing: Add all the odd numbers between 1 and the number
+     *    entered by the user.
+     * Output: Output the total.
+     */
+     function wrapper() {
+           var score = coneVolume(2, 4);
+           document.getElementById('outputDiv').innerHTML = score;
+      }
+
+     function coneVolume(radius, height) {
+       r = radius
+       h = height
+       v = (Math.PI * Math.pow (r, 2) * h) / 3;
+       return v;
+     }
+
+    </script>
+  </head>
+
+  <body>
+    <input type="text" id="input1"><br>
+    <button type="button" onclick="wrapper()">Click</button> <br>
+    <div id="outputDiv"></div>
+  </body>
+</html>
